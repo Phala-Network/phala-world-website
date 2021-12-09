@@ -11,23 +11,23 @@ export const Home = (): JSX.Element => {
     })
   }
 
-  const handleMouseOut = () => {
+  const handleMouseLeave = () => {
     setStartingPoint({
       x: 0,
       y: 0,
     })
-    const header: any = document.getElementById('container')
-    header.style.setProperty('--xdeg', 0)
-    header.style.setProperty('--ydeg', 0)
+    const container: any = document.getElementById('container')
+    container.style.setProperty('--xdeg', 0)
+    container.style.setProperty('--ydeg', 0)
   }
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    const header: any = document.getElementById('container')
-    const xdeg = ((startingPoint.x - e.clientX) / window.outerWidth) * 2 + 0.5
-    header.style.setProperty('--xdeg', xdeg)
+    const container: any = document.getElementById('container')
+    const xdeg = ((e.clientX - startingPoint.x) / window.outerWidth) * 2 + 0.5
+    container.style.setProperty('--xdeg', xdeg)
 
-    const ydeg = ((startingPoint.y - e.clientY) / window.outerHeight) * 2 + 0.5
-    header.style.setProperty('--ydeg', ydeg)
+    const ydeg = ((e.clientY - startingPoint.y) / window.outerHeight) * 2 + 0.5
+    container.style.setProperty('--ydeg', ydeg)
   }
 
   return (
@@ -39,9 +39,9 @@ export const Home = (): JSX.Element => {
 
       <div
         id="container"
-        className="container"
+        className={`container ${startingPoint.x === 0 ? '' : 'moving'}`}
         onMouseEnter={handleMouseEnter}
-        onMouseOut={handleMouseOut}
+        onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove}
       >
         <img

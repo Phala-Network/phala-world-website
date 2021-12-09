@@ -61,6 +61,12 @@ body {
     }
   }
 
+  &.moving {
+    .element, .lighting, .role, .role-shadow {
+      transition: none;
+    }
+  }
+
   // backgroung element style
   .element {
     position: absolute;
@@ -73,7 +79,7 @@ body {
       calc(var(--xdeg) * 10px),
       calc(var(--ydeg) * 10px + 9.5vh)
     );
-    transition: all 1s linear;
+    transition: all 0.2s linear;
   }
 
   // lighting style
@@ -84,7 +90,7 @@ body {
     width: 100vw;
     height: 92vh;
     transform: translate(calc(var(--xdeg) * 20px), calc(var(--ydeg) * 20px));
-    transition: all 1s linear;
+    transition: all 0.2s linear;
   }
 
   // role style
@@ -100,7 +106,7 @@ body {
       calc(var(--xdeg) * 30px + 30vw),
       calc(var(--ydeg) * 20px + 16vh)
     );
-    transition: all 1s linear;
+    transition: all 0.2s linear;
   }
 
   // role shadow style
@@ -116,7 +122,7 @@ body {
       calc(var(--xdeg) * 30px + 1vw),
       calc(var(--ydeg) * 20px + 70vh)
     );
-    transition: all 1s linear;
+    transition: all 0.2s linear;
   }
 
   @media screen and (max-width: 480px) {
