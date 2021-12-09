@@ -35,12 +35,12 @@ body {
     text-align: center;
     width: 100%;
     font-size: 1.2rem;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
-    sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+      'Helvetica Neue', sans-serif;
 
     .name {
-      color: #B1D450;
+      color: #b1d450;
     }
 
     .desc {
@@ -62,7 +62,10 @@ body {
   }
 
   &.moving {
-    .element, .lighting, .role, .role-shadow {
+    .element,
+    .lighting,
+    .role,
+    .role-shadow {
       transition: none;
     }
   }

@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import React, { useState } from 'react'
+import Layout from '../components/Layout'
 
 export const Home = (): JSX.Element => {
   const [startingPoint, setStartingPoint] = useState({ x: 0, y: 0 })
@@ -9,6 +9,8 @@ export const Home = (): JSX.Element => {
       x: e.clientX,
       y: e.clientY,
     })
+    const container: any = document.getElementById('container')
+    container.setAttribute('class', 'container moving')
   }
 
   const handleMouseLeave = () => {
@@ -17,6 +19,7 @@ export const Home = (): JSX.Element => {
       y: 0,
     })
     const container: any = document.getElementById('container')
+    container.setAttribute('class', 'container')
     container.style.setProperty('--xdeg', 0)
     container.style.setProperty('--ydeg', 0)
   }
@@ -26,20 +29,15 @@ export const Home = (): JSX.Element => {
     const xdeg = ((e.clientX - startingPoint.x) / window.outerWidth) * 2 + 0.5
     container.style.setProperty('--xdeg', xdeg)
 
-    const ydeg = ((e.clientY - startingPoint.y) / window.outerHeight) * 2 + 0.5
+    const ydeg = ((e.clientY - startingPoint.y) / window.outerHeight) * 2 + 0.3
     container.style.setProperty('--ydeg', ydeg)
   }
 
   return (
-    <div>
-      <Head>
-        <title>Phala World</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout>
       <div
         id="container"
-        className={`container ${startingPoint.x === 0 ? '' : 'moving'}`}
+        className="container"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove}
@@ -84,7 +82,7 @@ export const Home = (): JSX.Element => {
           </a>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 
