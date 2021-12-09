@@ -28,6 +28,39 @@ body {
     transform: translateY(70vh);
   }
 
+  .text-info {
+    position: absolute;
+    bottom: 17vh;
+    z-index: 50;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
+    sans-serif;
+
+    .name {
+      color: #B1D450;
+    }
+
+    .desc {
+      color: #f2f2f2;
+    }
+  }
+
+  .img-buttons {
+    position: absolute;
+    bottom: 2vh;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 15rem;
+      height: auto;
+    }
+  }
+
   // backgroung element style
   .element {
     position: absolute;
@@ -84,5 +117,11 @@ body {
       calc(var(--ydeg) * 20px + 70vh)
     );
     transition: all 1s linear;
+  }
+
+  @media screen and (max-width: 480px) {
+    .img-buttons img {
+      width: 10rem;
+    }
   }
 }

@@ -61,6 +61,28 @@ export const Home = (): JSX.Element => {
           alt="role-shadow"
         />
         <img className="ground" src="/images/02_ground.png" alt="ground" />
+        <div className="text-info">
+          <span className="name">PHALAWORLD | </span>
+          <span className="desc">COMING SOON IN 2022</span>
+        </div>
+        <div className="img-buttons">
+          <a
+            href="https://twitter.com/PhalaWorld"
+            title="Discord"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/images/00_Bottom_Discord.png" alt="Discord" />
+          </a>
+          <a
+            href="https://twitter.com/PhalaWorld"
+            title="Discord"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/images/00_Bottom_Twitter.png" alt="Twitter" />
+          </a>
+        </div>
       </div>
     </div>
   )
