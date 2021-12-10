@@ -8,6 +8,11 @@ body {
   font-size: 20px;
 }
 
+@font-face {
+  font-family: 'Montserrat-Blod';
+  src: url('/font/Montserrat-Bold-3.otf') format('woff2');
+}
+ 
 // Z-index
 $zindex-0: 1;
 $zindex-1: 10;
@@ -28,14 +33,12 @@ $zindex-5: 50;
 
   .text-info {
     position: absolute;
-    bottom: 17vh;
+    bottom: 19vh;
     z-index: $zindex-5;
     text-align: center;
     width: 100%;
-    font-size: 1.2rem;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
-      'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-family: Montserrat-Blod, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
     .name {
       color: #b1d450;
@@ -54,7 +57,7 @@ $zindex-5: 50;
     text-align: center;
 
     img {
-      width: 15rem;
+      width: 13.5rem;
       height: auto;
     }
   }
