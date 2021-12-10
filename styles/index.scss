@@ -8,30 +8,28 @@ body {
   font-size: 20px;
 }
 
+// Z-index
+$zindex-0: 1;
+$zindex-1: 10;
+$zindex-2: 20;
+$zindex-3: 30;
+$zindex-4: 40;
+$zindex-5: 50;
+
 .container {
   position: relative;
   overflow: hidden;
   height: 100vh;
   background-image: url(/images/01_background.png);
   background-size: cover;
-  z-index: 10;
+  z-index: $zindex-1;
   --xdeg: 0.5;
   --ydeg: 0.5;
-
-  .ground {
-    position: absolute;
-    top: 0;
-    z-index: 20;
-    width: 100vw;
-    height: 23vh;
-    transform-origin: left top;
-    transform: translateY(70vh);
-  }
 
   .text-info {
     position: absolute;
     bottom: 17vh;
-    z-index: 50;
+    z-index: $zindex-5;
     text-align: center;
     width: 100%;
     font-size: 1.2rem;
@@ -51,7 +49,7 @@ body {
   .img-buttons {
     position: absolute;
     bottom: 2vh;
-    z-index: 50;
+    z-index: $zindex-5;
     width: 100%;
     text-align: center;
 
@@ -64,17 +62,18 @@ body {
   &.moving {
     .element,
     .lighting,
+    .ground,
     .role,
     .role-shadow {
       transition: none;
     }
   }
 
-  // backgroung element style
+  // level-1: background element style
   .element {
     position: absolute;
     top: 0;
-    z-index: 20;
+    z-index: $zindex-2;
     width: 100vw;
     height: 56.6vh;
     transform-origin: left top;
@@ -85,26 +84,37 @@ body {
     transition: all 0.2s linear;
   }
 
-  // lighting style
+  // level-2: lighting style
   .lighting {
     position: absolute;
     top: 0;
-    z-index: 30;
+    z-index: $zindex-3;
     width: 100vw;
     height: 92vh;
     transform: translate(calc(var(--xdeg) * 20px), calc(var(--ydeg) * 20px));
     transition: all 0.2s linear;
   }
 
-  // role style
+  // level-3: ground style
+  .ground {
+    position: absolute;
+    top: 0;
+    z-index: $zindex-2;
+    width: 100vw;
+    height: 23vh;
+    transform-origin: left top;
+    transform: translateY(calc(var(--ydeg) * 15px + 70vh));
+    transition: all 0.2s linear;
+  }
+
+  // level-4: role style
   .role {
     position: absolute;
     top: 0;
-    z-index: 40;
+    z-index: $zindex-4;
     width: 40vw;
     height: 61.4vh;
     transform-origin: left top;
-    // transform: translate(30vw, 16vh);
     transform: translate(
       calc(var(--xdeg) * 30px + 30vw),
       calc(var(--ydeg) * 20px + 16vh)
@@ -112,15 +122,14 @@ body {
     transition: all 0.2s linear;
   }
 
-  // role shadow style
+  // level-4: role shadow style
   .role-shadow {
     position: absolute;
     top: 0;
-    z-index: 40;
+    z-index: $zindex-4;
     width: 98vw;
     height: 24vh;
     transform-origin: left top;
-    // transform: translate(1vw, 70vh);
     transform: translate(
       calc(var(--xdeg) * 30px + 1vw),
       calc(var(--ydeg) * 20px + 70vh)
