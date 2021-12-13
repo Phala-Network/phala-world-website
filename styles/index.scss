@@ -9,7 +9,7 @@
 body {
   font-size: 20px;
 }
- 
+
 // Z-index
 $zindex-0: 1;
 $zindex-1: 10;
@@ -22,8 +22,7 @@ $zindex-5: 50;
   position: relative;
   overflow: hidden;
   height: 100vh;
-  background-image: url(/images/01_background.png);
-  background-size: cover;
+  background-color: #000;
   z-index: $zindex-1;
   --xdeg: 0.5;
   --ydeg: 0.5;
@@ -35,7 +34,8 @@ $zindex-5: 50;
     text-align: center;
     width: 100%;
     font-size: 1rem;
-    font-family: Montserrat, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-family: Montserrat, system-ui, 'PingFang SC', 'Microsoft YaHei',
+      sans-serif;
     font-weight: 700;
 
     .name {
