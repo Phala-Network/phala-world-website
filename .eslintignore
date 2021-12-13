@@ -1,3 +1,4 @@
 **/node_modules/*
 **/out/*
 **/.next/*
+/public/lib/autotrack.js
