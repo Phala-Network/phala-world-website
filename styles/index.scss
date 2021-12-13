@@ -1,3 +1,5 @@
+@import './webfonts/Montserrat.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +8,6 @@
 
 body {
   font-size: 20px;
-}
-
-@font-face {
-  font-family: 'Montserrat-Blod';
-  src: url('/font/Montserrat-Bold-3.otf') format('woff2');
 }
  
 // Z-index
@@ -38,7 +35,8 @@ $zindex-5: 50;
     text-align: center;
     width: 100%;
     font-size: 1rem;
-    font-family: Montserrat-Blod, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-family: Montserrat, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 700;
 
     .name {
       color: #b1d450;
