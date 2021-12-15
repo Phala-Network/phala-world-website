@@ -65,7 +65,7 @@ export const Home = (): JSX.Element => {
         </div>
         <div className="img-buttons">
           <a
-            href="https://discord.gg/snZU9EUv"
+            href="http://discord.gg/phala"
             title="Discord"
             target="_blank"
             rel="noopener noreferrer"
