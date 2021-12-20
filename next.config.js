@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
 
- const securityHeaders = [
+const securityHeaders = [
   {
     key: 'X-XSS-Protection',
     value: '1; mode=block',
@@ -16,7 +16,7 @@
     value: 'nosniff',
   },
 ]
- const nextConfig = {
+const nextConfig = {
   async headers() {
     return [
       {
