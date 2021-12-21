@@ -139,24 +139,22 @@ $zindex-5: 50;
   }
 
   @media screen and (max-width: 480px) {
-    & {
-      background-image: url(/images/mobile.jpeg);
-      background-size: cover;
+    background-image: url(/images/mobile.jpeg);
+    background-size: cover;
 
-      .element,
-      .lighting,
-      .ground,
-      .role,
-      .role-shadow {
-        display: none;
-      }
+    .element,
+    .lighting,
+    .ground,
+    .role,
+    .role-shadow {
+      display: none;
+    }
 
-      .text-info {
-        bottom: 15vh;
-      }
-      .img-buttons img {
-        width: 10rem;
-      }
+    .text-info {
+      bottom: 15vh;
+    }
+    .img-buttons img {
+      width: 10rem;
     }
   }
 }
